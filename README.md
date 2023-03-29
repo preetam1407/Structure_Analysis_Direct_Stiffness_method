@@ -1,8 +1,8 @@
 # Structure_Analysis_direct_Stiffness_method
-An analysis of a 2-D frame by Indirect Stiffness Method. 
-The ISM is based on the principles of matrix structural analysis.
+An analysis of a 2-D frame by Direct Stiffness Method. 
+The DSM is based on the principles of matrix structural analysis.
 
-- Define the structure: Identify the elements, nodes , and their connectivity.
+- Define the structure: Identify the elements, nodes, and their connectivity.
 - Define geometry and material properties.
 - Define boundary conditions.
 - Define loads.
