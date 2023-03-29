@@ -1,7 +1,5 @@
-clear
 clc
-close all
-
+clearvars
 
 % Analysis of a 2-D frame using Direct stiffness Matrix.
 
