@@ -10,37 +10,34 @@ Grade of concrete: M25
 Fixed support at base
 Ignore self-weight of members
 
-Member Load
+Member Load:
 Load at each floor: 12 kN/m UDL on all beams
 
 Joint Load
-➢ For 3
-rd story roof:
+➢ For 3rd story roof:
 Joint load = 7.5 kN along X-direction at all nodes.
 ➢ For 4th story roof:
 Joint load = 15 kN along X-direction at all nodes.
 ➢ For 5th story roof:
 Joint load = 30 kN along X-direction at all nodes.
  
-Identifying Associated unrestricted Degrees of Freedom, Reactions at the restricted Degrees of Freedom and the Member end forces.
+Final Output: Identifying Associated unrestricted Degrees of Freedom, Reactions at the restricted Degrees of Freedom and the Member end forces.
 %}
 
 % defining number of members.
 Number_of_elements = 45;
 
 
-% Cross-sectional Area, Young Modulus of Elasticity, Moment of inertia,
-% Member orientation of each member in anti-clock wise direction. Degree of
-% Freedom, External_ Forces, 
+% Cross-sectional Area, Young Modulus of Elasticity, Moment of inertia, Member orientation of each member in anti-clock wise direction, Degree of Freedom, External_Forces.
 
-% Properties_Matrix = ["Member";"Node_1";"Node_2";"Lenght";"Cross sectional Area";"Moment of inertia";"Young Modulu of Elasticity"];
+% Properties_Matrix = ["Member";"Node_1";"Node_2";"Length";"Cross sectional Area";"Moment of inertia";"Young Modulu of Elasticity"];
 
 % Defining Members
 Member = [1;2;3;4;5;6;7;8;9;10;11;12;13;14;15;16;17;18;19;20;21;22;23;24;25;26;27;28;29;30;31;32;33;34;35;36;37;38;39;40;41;42;43;44;45];
 
 % member_nodes_connectivity.
-Node_1 = [1	2	3	4	6	7	8	9	10	6	7	8	9	11	12	13	14	15	11	12	13	14	16	17	18	19	20	16	17	18	19	21	22	23	24	25	21	22	23	24	26	27	28	29	30]';
-Node_2 = [2	3	4	5	1	2	3	4	5	7	8	9	10	6	7	8	9	10	12	13	14	15	11	12	13	14	15	17	18	19	20	16	17	18	19	20	22	23	24	25	21	22	23	24	25]';
+Node_1 = [1	 2	3	4	6	7	8	9	10	6	7	8	9	11	12	13	14	15	11	12	13	14	16	17	18	19	20	16	17	18	19	21	22	23	24	25	21	22	23	24	26	27	28	29	30]';
+Node_2 = [2	 3	4	5   1	2	3	4	5	7	8	9	10	6	7	8	9	10	12	13	14	15	11	12	13	14	15	17	18	19	20	16	17	18	19	20	22	23	24	25	21	22	23	24	25]';
 
 % Length of Beams and Frames.
 Length= [4;3;3;4;3.5;3.5;3.5;3.5;3.5;4;3;3;4;3.5;3.5;3.5;3.5;3.5;4;3;3;4;3.5;3.5;3.5;3.5;3.5;4;3;3;4;3.5;3.5;3.5;3.5;3.5;4;3;3;4;3.5;3.5;3.5;3.5;3.5;]; 
@@ -154,7 +151,6 @@ Ur = zeros(15,1);
     FEF_b = F_B(76:90);
  
 % Known and unknown joints forces
-
     External_forces_a = [30;0;0;30;0;0;30;0;0;30;0;0;30;0;0;15;0;0;15;0;0;15;0;0;15;0;0;15;0;0;7.50000000000000;0;0;7.50000000000000;0;0;7.50000000000000;0;0;7.50000000000000;0;0;7.5;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0];
     External_forces_b = [76;77;78;79;80;81;82;83;84;85;86;87;88;89;90];
 
